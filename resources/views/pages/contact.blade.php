@@ -78,8 +78,8 @@
     <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
         <div class="reveal">
-            <div class="section-tag mb-4">{{ __('messages.contact.direct_tag') }}</div>
-            <h3 class="text-2xl font-black text-body mb-4">{{ __('messages.contact.direct_title') }}</h3>
+            <p class="text-xs font-bold uppercase tracking-widest mb-4 pb-3 border-b border-theme"
+               style="color:var(--primary)">{{ __('messages.contact.direct_tag') }}</p>
 
             @php $phones = __('messages.contact.phones'); @endphp
 
@@ -130,8 +130,8 @@
         </div>
 
         <div class="reveal reveal-delay-2">
-            <div class="section-tag mb-4">{{ __('messages.contact.social_tag') }}</div>
-            <h3 class="text-2xl font-black text-body mb-4">{{ __('messages.contact.social_title') }}</h3>
+            <p class="text-xs font-bold uppercase tracking-widest mb-4 pb-3 border-b border-theme"
+               style="color:var(--primary)">{{ __('messages.contact.social_tag') }}</p>
 
             <div class="space-y-4">
                 <a href="https://www.instagram.com/creative.team2025"
