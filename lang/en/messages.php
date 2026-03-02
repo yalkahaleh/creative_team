@@ -45,13 +45,13 @@ return [
         'hero_title'    => 'Our Services',
         'hero_subtitle' => 'At Creative Team, we offer comprehensive digital solutions covering all your project needs — from visual identity to technical development and advanced marketing.',
         'intro_title'   => 'One Integrated System for Your Project',
-        'intro_text'    => "We don't offer separate services — we build an integrated system that serves your project from the first idea to achieving real results.",
+        'intro_text'    => 'From strategy to execution, one team that covers every angle of your digital presence.',
 
         /* ── Category labels ── */
         'cat_dev'      => 'Development',
-        'cat_social'   => 'Social Media',
+        'cat_social'   => 'Content & Marketing',
         'cat_design'   => 'Design',
-        'cat_video'    => 'Video',
+        'cat_video'    => 'Editing & Montage',
         'cat_photo'    => 'Photography',
 
         /* ── 01 Development ── */
@@ -67,7 +67,7 @@ return [
         ],
 
         /* ── 02 Social Media ── */
-        'social_title'    => 'Social Media Management',
+        'social_title'    => 'Content Management & Digital Marketing',
         'social_subtitle' => 'Thoughtful management built on analysis and strategy — not random posting.',
         'social_for'      => 'We serve:',
         'social_clients'  => ['Companies', 'Small & Medium Businesses', 'Brands', 'Stores', 'Content Creators & Influencers'],
@@ -96,7 +96,7 @@ return [
         ],
 
         /* ── 04 Video ── */
-        'video_title'    => 'Video Production & Editing',
+        'video_title'    => 'Editing & Montage',
         'video_subtitle' => 'Video is the most powerful influence tool today — we turn it into an effective sales medium.',
         'video_services' => [
             ['icon' => 'film',         'title' => 'Reels Editing',               'desc' => 'Fast-paced short videos optimized for platform algorithms.'],
@@ -237,9 +237,9 @@ return [
         'services_list'=> [
             'Web Development',
             'Mobile App',
-            'Social Media Management',
+            'Content Management & Digital Marketing',
             'Visual Identity & Logo',
-            'Video Production',
+            'Editing & Montage',
             'Photography',
             'Other',
         ],
@@ -255,7 +255,7 @@ return [
         /* Hero */
         'hero_tag'      => 'Creative Team',
         'hero_title'    => 'We Turn Your Idea Into a Powerful Digital Presence',
-        'hero_services' => 'Design & Creativity · Video & Photo Production · Social Media Management · Web & App Development',
+        'hero_services' => 'Design & Creativity · Editing & Montage · Content & Digital Marketing · Web & App Development',
         'hero_tagline'  => 'From strategy to execution — one team, one vision.',
         'hero_cta1'     => 'Book a Free Consultation',
         'hero_cta2'     => 'Explore Our Services',
