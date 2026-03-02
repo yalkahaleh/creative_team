@@ -97,8 +97,8 @@
                         </svg>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-dim uppercase tracking-wider mb-0.5">WhatsApp</div>
-                        <div class="font-bold text-body text-base" dir="ltr">{{ $phones[0] }}</div>
+                        <div class="font-bold text-body text-base">WhatsApp</div>
+                        <div class="text-dim text-sm" dir="ltr">{{ $phones[0] }}</div>
                     </div>
                     <svg class="w-4 h-4 text-dim {{ $isAr ? 'me-0 ms-auto' : 'ms-auto' }}"
                          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -117,8 +117,8 @@
                         </svg>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-dim uppercase tracking-wider mb-0.5">{{ $isAr ? 'اتصال مباشر' : 'Direct Call' }}</div>
-                        <div class="font-bold text-body text-base" dir="ltr">{{ $phones[1] }}</div>
+                        <div class="font-bold text-body text-base">{{ $isAr ? 'اتصال مباشر' : 'Direct Call' }}</div>
+                        <div class="text-dim text-sm" dir="ltr">{{ $phones[1] }}</div>
                     </div>
                     <svg class="w-4 h-4 text-dim {{ $isAr ? 'me-0 ms-auto' : 'ms-auto' }}"
                          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
