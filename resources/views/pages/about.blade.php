@@ -7,9 +7,6 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════
-     HERO SECTION
-══════════════════════════════════════════════════════ --}}
 <section class="hero-section relative flex items-center justify-center overflow-hidden"
          style="background: var(--bg);">
 
@@ -20,7 +17,6 @@
     <div class="glow-orb w-72 h-72 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:10%; right:5%;"></div>
 
-    {{-- Floating objects --}}
     <span class="float-obj float-a" style="top:10%; left:6%;">🏆</span>
     <span class="float-obj float-b" style="top:15%; right:8%;">🚀</span>
     <span class="float-obj float-c" style="bottom:20%; left:5%;">💡</span>
@@ -51,9 +47,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     STATS BAR
-══════════════════════════════════════════════════════ --}}
 <section class="py-14 bg-surface border-y border-theme overflow-hidden">
     <div class="max-w-5xl mx-auto px-4">
         <div class="grid grid-cols-3 gap-6 text-center">
@@ -77,14 +70,10 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     WHO WE ARE
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4" style="background: var(--bg);">
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-            {{-- Text Side --}}
             <div>
                 <div class="section-tag mb-4 reveal">{{ __('messages.about.who_tag') }}</div>
                 <h2 class="text-4xl md:text-5xl font-black text-body mb-6 reveal reveal-delay-1">
@@ -100,10 +89,8 @@
                 </p>
             </div>
 
-            {{-- Visual Side --}}
             <div class="reveal reveal-delay-2">
                 <div class="relative">
-                    {{-- Main card --}}
                     <div class="glass-card p-8 relative z-10">
                         <div class="grid grid-cols-2 gap-4">
                             @php
@@ -125,7 +112,6 @@
                             @endforeach
                         </div>
                     </div>
-                    {{-- Decorative blobs --}}
                     <div class="absolute -top-6 -right-6 w-32 h-32 rounded-full opacity-20"
                          style="background: radial-gradient(circle, #289db9, transparent); filter: blur(20px);"></div>
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 rounded-full opacity-15"
@@ -137,9 +123,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     WHY WE WERE FOUNDED
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4 bg-surface border-y border-theme">
     <div class="max-w-5xl mx-auto">
 
@@ -151,54 +134,33 @@
             <p class="text-dim text-lg reveal reveal-delay-2">{{ __('messages.about.why_intro') }}</p>
         </div>
 
-        {{-- Problem Cards --}}
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             @foreach(__('messages.about.problems') as $k => $problem)
-            <div class="about-problem-card reveal {{ $k === 0 ? '' : ($k === 1 ? 'reveal-delay-1' : 'reveal-delay-2') }}">
-                <div class="problem-icon-wrap mb-4">
-                    @if($problem['icon'] === 'alert-circle')
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/>
-                        <line x1="12" y1="16" x2="12.01" y2="16"/>
-                    </svg>
-                    @elseif($problem['icon'] === 'dollar-sign')
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <line x1="12" y1="1" x2="12" y2="23"/>
-                        <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>
-                    </svg>
-                    @else
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <rect x="3" y="3" width="18" height="18" rx="2"/>
-                        <circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
-                    </svg>
-                    @endif
-                </div>
-                <p class="text-body font-semibold text-base">{{ $problem['text'] }}</p>
+            <div class="story-problem-card glass-card p-7 reveal {{ $k === 0 ? '' : ($k === 1 ? 'reveal-delay-1' : 'reveal-delay-2') }}">
+                <div class="story-problem-num">{{ str_pad($k + 1, 2, '0', STR_PAD_LEFT) }}</div>
+                <p class="text-body font-semibold text-base leading-relaxed mt-4">{{ $problem['text'] }}</p>
             </div>
             @endforeach
         </div>
 
-        {{-- Solution Banner --}}
-        <div class="about-solution-banner reveal reveal-delay-3">
-            <div class="solution-icon">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                </svg>
+        <div class="story-solution-card reveal reveal-delay-3">
+            <div class="story-solution-icon select-none">💡</div>
+            <div class="flex-1">
+                <p class="text-sm font-bold uppercase tracking-widest mb-2" style="color:rgba(40,157,185,.7)">
+                    {{ $isAr ? 'الجواب' : 'Our Answer' }}
+                </p>
+                <p class="text-body text-lg font-semibold leading-relaxed">
+                    {{ __('messages.about.why_solution') }}
+                </p>
             </div>
-            <p class="text-body text-base leading-relaxed">{{ __('messages.about.why_solution') }}</p>
         </div>
 
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     VISION & MISSION
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4" style="background: var(--bg);">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 
-        {{-- Vision --}}
         <div class="vision-card glass-card p-10 reveal">
             <div class="vm-icon-wrap mb-6" style="background: linear-gradient(135deg,rgba(40,157,185,0.2),rgba(40,157,185,0.05));">
                 <svg class="w-7 h-7 text-primary-500" style="color:var(--primary)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -212,7 +174,6 @@
             <p class="text-dim text-base leading-relaxed">{{ __('messages.about.vision_text') }}</p>
         </div>
 
-        {{-- Mission --}}
         <div class="mission-card glass-card p-10 reveal reveal-delay-2">
             <div class="vm-icon-wrap mb-6" style="background: linear-gradient(135deg,rgba(63,89,101,0.25),rgba(63,89,101,0.08));">
                 <svg class="w-7 h-7" style="color:var(--primary)" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -227,9 +188,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     WHAT SETS US APART
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4 bg-surface border-y border-theme">
     <div class="max-w-5xl mx-auto">
 
@@ -257,9 +215,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     OUR PHILOSOPHY
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4" style="background: var(--bg);">
     <div class="max-w-5xl mx-auto">
 
@@ -274,7 +229,6 @@
             @foreach(__('messages.about.phils') as $m => $phil)
             @php $delay = ['', 'reveal-delay-2', 'reveal-delay-4'][$m] ?? ''; @endphp
             <div class="phil-card why-card reveal {{ $delay }}">
-                {{-- Icon --}}
                 <div class="phil-icon mb-5">
                     @if($phil['icon'] === 'trending-up')
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -304,11 +258,7 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CTA
-══════════════════════════════════════════════════════ --}}
 <section class="cta-section py-24 px-4">
-    {{-- decorative rings --}}
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="cta-ring" style="width:500px;height:500px;top:-100px;{{ $isAr ? 'right' : 'left' }}:-100px;"></div>
         <div class="cta-ring" style="width:350px;height:350px;bottom:-80px;{{ $isAr ? 'left' : 'right' }}:-80px; animation-delay:-3s;"></div>

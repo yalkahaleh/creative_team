@@ -13,9 +13,6 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════════════ --}}
 <section class="hero-section relative flex items-center justify-center overflow-hidden"
          style="background: var(--bg);">
 
@@ -53,9 +50,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     FREE CONSULTATION BANNER
-══════════════════════════════════════════════════════ --}}
 <section class="py-16 px-4 bg-surface border-y border-theme">
     <div class="max-w-4xl mx-auto">
         <div class="consult-banner reveal">
@@ -80,21 +74,16 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     DIRECT CONTACT + SOCIAL
-══════════════════════════════════════════════════════ --}}
-<section class="py-24 px-4" style="background: var(--bg);">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+<section class="py-14 px-4" style="background: var(--bg);">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
-        {{-- Phone / WhatsApp --}}
         <div class="reveal">
             <div class="section-tag mb-4">{{ __('messages.contact.direct_tag') }}</div>
-            <h3 class="text-2xl font-black text-body mb-6">{{ __('messages.contact.direct_title') }}</h3>
+            <h3 class="text-2xl font-black text-body mb-4">{{ __('messages.contact.direct_title') }}</h3>
 
             @php $phones = __('messages.contact.phones'); @endphp
 
             <div class="space-y-3">
-                {{-- First number → WhatsApp --}}
                 @php
                     $waPhone  = preg_replace('/\D/', '', $phones[0]);
                     $waLink1  = "https://wa.me/{$waPhone}?text={$waMsg}";
@@ -118,7 +107,6 @@
                     </svg>
                 </a>
 
-                {{-- Second number → Call --}}
                 @php $callPhone = preg_replace('/\D/', '', $phones[1]); @endphp
                 <a href="tel:+{{ $callPhone }}"
                    class="contact-phone-card">
@@ -141,13 +129,11 @@
             </div>
         </div>
 
-        {{-- Social Media --}}
         <div class="reveal reveal-delay-2">
             <div class="section-tag mb-4">{{ __('messages.contact.social_tag') }}</div>
-            <h3 class="text-2xl font-black text-body mb-6">{{ __('messages.contact.social_title') }}</h3>
+            <h3 class="text-2xl font-black text-body mb-4">{{ __('messages.contact.social_title') }}</h3>
 
             <div class="space-y-4">
-                {{-- Instagram --}}
                 <a href="https://www.instagram.com/creative.team2025"
                    target="_blank" rel="noopener"
                    class="contact-social-card">
@@ -170,7 +156,6 @@
                     </svg>
                 </a>
 
-                {{-- Facebook --}}
                 <a href="https://www.facebook.com/share/1F6DdThmBh/"
                    target="_blank" rel="noopener"
                    class="contact-social-card">
@@ -195,9 +180,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CONTACT FORM
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4 bg-surface border-y border-theme">
     <div class="max-w-2xl mx-auto">
 
@@ -211,7 +193,6 @@
         <form class="glass-card p-8 md:p-10 reveal reveal-delay-2"
               id="contactForm" novalidate>
 
-            {{-- Name --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_name') }}</label>
                 <input type="text" name="name" required
@@ -219,7 +200,6 @@
                        placeholder="{{ $isAr ? 'أدخل اسمك الكامل' : 'Enter your full name' }}">
             </div>
 
-            {{-- Phone --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_phone') }}</label>
                 <input type="tel" name="phone" required dir="ltr"
@@ -227,7 +207,6 @@
                        placeholder="+963 9XX XXX XXX">
             </div>
 
-            {{-- Service --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_service') }}</label>
                 <select name="service" class="form-input form-select">
@@ -238,7 +217,6 @@
                 </select>
             </div>
 
-            {{-- Message --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_message') }}</label>
                 <textarea name="message" rows="4" required
@@ -246,7 +224,6 @@
                           placeholder="{{ __('messages.contact.field_message_placeholder') }}"></textarea>
             </div>
 
-            {{-- Submit --}}
             <button type="submit" id="formSubmit"
                     class="btn-primary w-full justify-center text-base py-4">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -256,7 +233,6 @@
                 {{ __('messages.contact.form_submit') }}
             </button>
 
-            {{-- Success --}}
             <div id="formSuccess" class="form-success hidden mt-4">
                 <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -269,9 +245,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CLOSING QUOTE
-══════════════════════════════════════════════════════ --}}
 <section class="cta-section py-24 px-4">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="cta-ring" style="width:500px;height:500px;top:-120px;{{ $isAr ? 'right' : 'left' }}:-120px;"></div>
