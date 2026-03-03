@@ -9,20 +9,15 @@
 
 @section('content')
 
-{{-- ═══════════════════════════════════════════════
-     01 · HERO
-════════════════════════════════════════════════ --}}
 <section class="hero-section relative flex items-center justify-center overflow-hidden" style="background:var(--bg)">
 
     <div class="hero-digital-bg"></div>
 
-    {{-- Ambient glow orbs --}}
     <div class="glow-orb w-[500px] h-[500px] opacity-15 dark:opacity-25"
          style="background:#289db9; top:-5%; right:-5%;"></div>
     <div class="glow-orb w-80 h-80 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:10%; left:-5%;"></div>
 
-    {{-- Floating emoji objects --}}
     <div class="float-obj float-a text-3xl" style="top:15%; {{ $isAr ? 'left' : 'right' }}:8%;">🎨</div>
     <div class="float-obj float-b text-2xl" style="top:25%; {{ $isAr ? 'right' : 'left' }}:6%;">💻</div>
     <div class="float-obj float-c text-3xl" style="bottom:20%; {{ $isAr ? 'left' : 'right' }}:12%;">🚀</div>
@@ -31,7 +26,8 @@
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto py-12">
         <div class="section-tag justify-center mb-6 reveal">{{ $h['hero_tag'] }}</div>
 
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight text-body">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 text-body"
+            style="line-height:{{ $isAr ? '1.4' : '1.15' }}">
             <span class="gradient-text">{{ $h['hero_title'] }}</span>
         </h1>
 
@@ -55,7 +51,6 @@
         </div>
     </div>
 
-    {{-- Scroll hint --}}
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-40 animate-bounce">
         <svg class="w-5 h-5 text-dim" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
@@ -63,9 +58,6 @@
     </div>
 </section>
 
-{{-- ═══════════════════════════════════════════════
-     02 · TRUST STRIP
-════════════════════════════════════════════════ --}}
 <section class="py-5 border-y border-theme bg-surface overflow-hidden">
     <div class="max-w-5xl mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
@@ -79,19 +71,14 @@
     </div>
 </section>
 
-{{-- ═══════════════════════════════════════════════
-     03 · WHO WE ARE (brief)
-════════════════════════════════════════════════ --}}
 <section class="py-24 px-4" style="background:var(--bg)">
     <div class="max-w-5xl mx-auto">
-        <div class="glass-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+        <div class="glass-card p-6 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-10">
 
-            {{-- Icon column --}}
             <div class="flex-shrink-0 who-icon-wrap reveal">
                 <span class="text-6xl">🏢</span>
             </div>
 
-            {{-- Text column --}}
             <div class="flex-1 text-center md:{{ $isAr ? 'text-right' : 'text-left' }}">
                 <div class="section-tag mb-4 reveal {{ $isAr ? 'justify-end md:justify-start' : 'justify-center md:justify-start' }}">
                     {{ $h['who_tag'] }}
@@ -113,9 +100,6 @@
     </div>
 </section>
 
-{{-- ═══════════════════════════════════════════════
-     04 · SERVICES PREVIEW (4 cards)
-════════════════════════════════════════════════ --}}
 <section class="py-24 px-4 bg-surface border-t border-theme">
     <div class="max-w-6xl mx-auto">
         <div class="text-center mb-14">
@@ -152,9 +136,6 @@
     </div>
 </section>
 
-{{-- ═══════════════════════════════════════════════
-     05 · WHY US
-════════════════════════════════════════════════ --}}
 <section class="py-24 px-4 bg-surface border-t border-theme">
     <div class="max-w-5xl mx-auto">
         <div class="text-center mb-14">
@@ -197,12 +178,8 @@
     </div>
 </section>
 
-{{-- ═══════════════════════════════════════════════
-     06 · FINAL CTA
-════════════════════════════════════════════════ --}}
 <section class="cta-section py-24 px-4 relative overflow-hidden">
 
-    {{-- Decorative rings --}}
     <div class="cta-ring w-64 h-64" style="top:50%; left:50%; transform:translate(-50%,-50%); animation-delay:0s;"></div>
     <div class="cta-ring w-96 h-96" style="top:50%; left:50%; transform:translate(-50%,-50%); animation-delay:1.5s;"></div>
     <div class="cta-ring w-[32rem] h-[32rem]" style="top:50%; left:50%; transform:translate(-50%,-50%); animation-delay:3s;"></div>

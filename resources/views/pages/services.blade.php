@@ -7,36 +7,29 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════
-     HERO SECTION
-══════════════════════════════════════════════════════ --}}
 <section class="hero-section relative flex items-center justify-center overflow-hidden"
          style="background: var(--bg);">
 
-    {{-- Digital CSS Background (grid + scan line + glow blobs) --}}
     <div class="hero-digital-bg"></div>
 
-    {{-- Background glow orbs --}}
     <div class="glow-orb w-96 h-96 opacity-20 dark:opacity-30"
          style="background:#289db9; top:10%; left:5%;"></div>
     <div class="glow-orb w-72 h-72 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:10%; right:5%;"></div>
 
-    {{-- Floating 3D Digital Objects --}}
-    <span class="float-obj float-a" style="top:12%; left:7%;">💻</span>
-    <span class="float-obj float-b" style="top:18%; right:9%;">📱</span>
-    <span class="float-obj float-c" style="bottom:22%; left:6%;">🎨</span>
-    <span class="float-obj float-a" style="bottom:18%; right:7%; animation-delay:-3s;">🎬</span>
-    <span class="float-obj float-b" style="top:55%; left:3%; animation-delay:-1.5s;">📸</span>
+    <span class="float-obj float-a text-3xl md:text-5xl" style="top:12%; left:7%;">💻</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:18%; right:9%;">📱</span>
+    <span class="float-obj float-c text-3xl md:text-5xl" style="bottom:22%; left:6%;">🎨</span>
+    <span class="float-obj float-a text-2xl md:text-4xl" style="bottom:18%; right:7%; animation-delay:-3s;">🎬</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:55%; left:3%; animation-delay:-1.5s;">📸</span>
 
-    {{-- Hero Content --}}
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
 
         <div class="section-tag mb-6 justify-center reveal">
             {{ __('messages.services.hero_tag') }}
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-black mb-6 reveal reveal-delay-1 text-body leading-tight">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 text-body leading-tight">
             <span class="gradient-text">{{ __('messages.services.hero_title') }}</span>
         </h1>
 
@@ -57,9 +50,6 @@
 
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     INTRO STRIP
-══════════════════════════════════════════════════════ --}}
 <section class="py-16 bg-surface border-y border-theme">
     <div class="max-w-5xl mx-auto px-4 text-center reveal">
         <p class="text-xl md:text-2xl font-bold text-body mb-3">
@@ -71,9 +61,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CATEGORY TABS (sticky)
-══════════════════════════════════════════════════════ --}}
 @php
 $cats = [
     ['key' => 'dev',    'emoji' => '💻', 'label' => __('messages.services.cat_dev')],
@@ -83,6 +70,8 @@ $cats = [
     ['key' => 'photo',  'emoji' => '📸', 'label' => __('messages.services.cat_photo')],
 ];
 @endphp
+
+<div style="background:var(--bg)">
 
 <div class="sticky top-[72px] z-40 bg-card border-b border-theme shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3">
@@ -97,16 +86,9 @@ $cats = [
     </div>
 </div>
 
-{{-- ══════════════════════════════════════════════════════
-     SERVICES SECTIONS
-══════════════════════════════════════════════════════ --}}
-<div style="background:var(--bg)">
-
-{{-- ── 01 DEVELOPMENT ── --}}
 <section class="service-section px-4 pt-12 pb-24" data-section="dev">
     <div class="max-w-7xl mx-auto">
 
-        {{-- Section Header --}}
         <div class="relative mb-12 reveal">
             <span class="section-number">01</span>
             <div class="{{ App::getLocale()==='ar' ? 'pr-8 md:pr-20' : 'pl-8 md:pl-20' }}">
@@ -122,7 +104,6 @@ $cats = [
             </div>
         </div>
 
-        {{-- Cards Grid --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach (__('messages.services.dev_services') as $i => $svc)
             <div class="glass-card tilt-card p-6 reveal reveal-delay-{{ ($i % 6) + 1 }}">
@@ -139,7 +120,6 @@ $cats = [
     </div>
 </section>
 
-{{-- ── 02 SOCIAL MEDIA ── --}}
 <section class="service-section px-4 pt-12 pb-24" data-section="social">
     <div class="max-w-7xl mx-auto">
 
@@ -158,19 +138,6 @@ $cats = [
             </div>
         </div>
 
-        {{-- "We serve" pills --}}
-        <div class="mb-12 reveal">
-            <p class="text-sm font-semibold text-dim mb-3">{{ __('messages.services.social_for') }}</p>
-            <div class="flex flex-wrap gap-2">
-                @foreach (__('messages.services.social_clients') as $client)
-                    <span class="px-4 py-1.5 rounded-full text-xs font-semibold border border-theme text-dim
-                                 bg-card hover:border-primary-500 hover:text-primary-500 transition-colors cursor-default">
-                        ✓ {{ $client }}
-                    </span>
-                @endforeach
-            </div>
-        </div>
-
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             @foreach (__('messages.services.social_services') as $i => $svc)
             <div class="glass-card tilt-card p-6 reveal reveal-delay-{{ ($i % 6) + 1 }}">
@@ -185,7 +152,6 @@ $cats = [
     </div>
 </section>
 
-{{-- ── 03 DESIGN ── --}}
 <section class="service-section px-4 pt-12 pb-24" data-section="design">
     <div class="max-w-7xl mx-auto">
 
@@ -220,7 +186,6 @@ $cats = [
     </div>
 </section>
 
-{{-- ── 04 VIDEO ── --}}
 <section class="service-section px-4 pt-12 pb-24" data-section="video">
     <div class="max-w-7xl mx-auto">
 
@@ -255,7 +220,6 @@ $cats = [
     </div>
 </section>
 
-{{-- ── 05 PHOTOGRAPHY ── --}}
 <section class="service-section px-4 pt-12 pb-24" data-section="photo">
     <div class="max-w-7xl mx-auto">
 
@@ -290,11 +254,8 @@ $cats = [
     </div>
 </section>
 
-</div>{{-- /space-y-32 --}}
+</div>
 
-{{-- ══════════════════════════════════════════════════════
-     WHY CHOOSE US
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 bg-surface border-t border-theme">
     <div class="max-w-7xl mx-auto px-4">
 
@@ -313,7 +274,6 @@ $cats = [
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach (__('messages.services.why_items') as $i => $item)
             <div class="why-card reveal reveal-delay-{{ $i + 1 }}">
-                {{-- Icon --}}
                 <div class="service-icon-wrap mx-auto mb-5">
                     @include('components.icon', ['name' => $item['icon']])
                 </div>
@@ -326,12 +286,8 @@ $cats = [
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CTA SECTION
-══════════════════════════════════════════════════════ --}}
 <section class="cta-section py-28 px-4">
 
-    {{-- Blobs --}}
     <div class="absolute top-0 left-1/4 w-64 h-64 rounded-full opacity-20"
          style="background:#289db9; filter:blur(80px);"></div>
     <div class="absolute bottom-0 right-1/4 w-80 h-80 rounded-full opacity-10"
@@ -359,7 +315,7 @@ $cats = [
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
-            <a href="https://wa.me/96279123456"
+            <a href="https://wa.me/963940832959"
                class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold border-2 text-white
                       border-white/30 hover:border-white hover:bg-white/10 transition-all">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

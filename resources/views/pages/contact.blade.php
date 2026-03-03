@@ -13,9 +13,6 @@
 
 @section('content')
 
-{{-- ══════════════════════════════════════════════════════
-     HERO
-══════════════════════════════════════════════════════ --}}
 <section class="hero-section relative flex items-center justify-center overflow-hidden"
          style="background: var(--bg);">
 
@@ -26,16 +23,16 @@
     <div class="glow-orb w-64 h-64 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:8%; right:4%;"></div>
 
-    <span class="float-obj float-a" style="top:12%; left:6%;">📞</span>
-    <span class="float-obj float-b" style="top:16%; right:8%;">💬</span>
-    <span class="float-obj float-c" style="bottom:20%; left:5%;">✉️</span>
-    <span class="float-obj float-a" style="bottom:16%; right:6%; animation-delay:-3s;">🤝</span>
+    <span class="float-obj float-a text-3xl md:text-5xl" style="top:12%; left:6%;">📞</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:16%; right:8%;">💬</span>
+    <span class="float-obj float-c text-3xl md:text-5xl" style="bottom:20%; left:5%;">✉️</span>
+    <span class="float-obj float-a text-2xl md:text-4xl" style="bottom:16%; right:6%; animation-delay:-3s;">🤝</span>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div class="section-tag mb-6 justify-center reveal">
             {{ __('messages.contact.hero_tag') }}
         </div>
-        <h1 class="text-5xl md:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight">
             <span class="gradient-text">{{ __('messages.contact.hero_title') }}</span>
         </h1>
         <p class="text-lg md:text-xl text-dim max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">
@@ -53,9 +50,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     FREE CONSULTATION BANNER
-══════════════════════════════════════════════════════ --}}
 <section class="py-16 px-4 bg-surface border-y border-theme">
     <div class="max-w-4xl mx-auto">
         <div class="consult-banner reveal">
@@ -73,28 +67,23 @@
                 <p class="text-dim text-sm">{{ __('messages.contact.cta_text') }}</p>
             </div>
             <a href="{{ $waLink }}" target="_blank" rel="noopener"
-               class="btn-primary flex-shrink-0">
-                🚀 {{ $isAr ? 'احجز الآن — مجاناً' : 'Book Now — It\'s Free' }}
+               class="btn-primary flex-shrink-0 w-full sm:w-auto justify-center">
+                🚀 {{ $isAr ? 'احجز الآن, مجاناً' : 'Book Now, It\'s Free' }}
             </a>
         </div>
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     DIRECT CONTACT + SOCIAL
-══════════════════════════════════════════════════════ --}}
-<section class="py-24 px-4" style="background: var(--bg);">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+<section class="py-14 px-4" style="background: var(--bg);">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
 
-        {{-- Phone / WhatsApp --}}
         <div class="reveal">
             <div class="section-tag mb-4">{{ __('messages.contact.direct_tag') }}</div>
-            <h3 class="text-2xl font-black text-body mb-6">{{ __('messages.contact.direct_title') }}</h3>
+            <h3 class="text-2xl font-black text-body mb-4">{{ __('messages.contact.direct_title') }}</h3>
 
             @php $phones = __('messages.contact.phones'); @endphp
 
             <div class="space-y-3">
-                {{-- First number → WhatsApp --}}
                 @php
                     $waPhone  = preg_replace('/\D/', '', $phones[0]);
                     $waLink1  = "https://wa.me/{$waPhone}?text={$waMsg}";
@@ -108,8 +97,8 @@
                         </svg>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-dim uppercase tracking-wider mb-0.5">WhatsApp</div>
-                        <div class="font-bold text-body text-base" dir="ltr">{{ $phones[0] }}</div>
+                        <div class="font-bold text-body text-base">WhatsApp</div>
+                        <div class="text-dim text-sm" dir="ltr">{{ $phones[0] }}</div>
                     </div>
                     <svg class="w-4 h-4 text-dim {{ $isAr ? 'me-0 ms-auto' : 'ms-auto' }}"
                          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -118,7 +107,6 @@
                     </svg>
                 </a>
 
-                {{-- Second number → Call --}}
                 @php $callPhone = preg_replace('/\D/', '', $phones[1]); @endphp
                 <a href="tel:+{{ $callPhone }}"
                    class="contact-phone-card">
@@ -129,8 +117,8 @@
                         </svg>
                     </div>
                     <div>
-                        <div class="text-xs font-bold text-dim uppercase tracking-wider mb-0.5">{{ $isAr ? 'اتصال مباشر' : 'Direct Call' }}</div>
-                        <div class="font-bold text-body text-base" dir="ltr">{{ $phones[1] }}</div>
+                        <div class="font-bold text-body text-base">{{ $isAr ? 'اتصال مباشر' : 'Direct Call' }}</div>
+                        <div class="text-dim text-sm" dir="ltr">{{ $phones[1] }}</div>
                     </div>
                     <svg class="w-4 h-4 text-dim {{ $isAr ? 'me-0 ms-auto' : 'ms-auto' }}"
                          fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -141,13 +129,11 @@
             </div>
         </div>
 
-        {{-- Social Media --}}
         <div class="reveal reveal-delay-2">
             <div class="section-tag mb-4">{{ __('messages.contact.social_tag') }}</div>
-            <h3 class="text-2xl font-black text-body mb-6">{{ __('messages.contact.social_title') }}</h3>
+            <h3 class="text-2xl font-black text-body mb-4">{{ __('messages.contact.social_title') }}</h3>
 
-            <div class="space-y-4">
-                {{-- Instagram --}}
+            <div class="space-y-3">
                 <a href="https://www.instagram.com/creative.team2025"
                    target="_blank" rel="noopener"
                    class="contact-social-card">
@@ -170,7 +156,6 @@
                     </svg>
                 </a>
 
-                {{-- Facebook --}}
                 <a href="https://www.facebook.com/share/1F6DdThmBh/"
                    target="_blank" rel="noopener"
                    class="contact-social-card">
@@ -195,9 +180,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CONTACT FORM
-══════════════════════════════════════════════════════ --}}
 <section class="py-24 px-4 bg-surface border-y border-theme">
     <div class="max-w-2xl mx-auto">
 
@@ -211,7 +193,6 @@
         <form class="glass-card p-8 md:p-10 reveal reveal-delay-2"
               id="contactForm" novalidate>
 
-            {{-- Name --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_name') }}</label>
                 <input type="text" name="name" required
@@ -219,7 +200,6 @@
                        placeholder="{{ $isAr ? 'أدخل اسمك الكامل' : 'Enter your full name' }}">
             </div>
 
-            {{-- Phone --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_phone') }}</label>
                 <input type="tel" name="phone" required dir="ltr"
@@ -227,18 +207,16 @@
                        placeholder="+963 9XX XXX XXX">
             </div>
 
-            {{-- Service --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_service') }}</label>
                 <select name="service" class="form-input form-select">
-                    <option value="">{{ $isAr ? '— اختر الخدمة —' : '— Select a service —' }}</option>
+                    <option value="">{{ $isAr ? ',  اختر الخدمة , ' : ',  Select a service , ' }}</option>
                     @foreach(__('messages.contact.services_list') as $svc)
                     <option value="{{ $svc }}">{{ $svc }}</option>
                     @endforeach
                 </select>
             </div>
 
-            {{-- Message --}}
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_message') }}</label>
                 <textarea name="message" rows="4" required
@@ -246,7 +224,6 @@
                           placeholder="{{ __('messages.contact.field_message_placeholder') }}"></textarea>
             </div>
 
-            {{-- Submit --}}
             <button type="submit" id="formSubmit"
                     class="btn-primary w-full justify-center text-base py-4">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -256,7 +233,6 @@
                 {{ __('messages.contact.form_submit') }}
             </button>
 
-            {{-- Success --}}
             <div id="formSuccess" class="form-success hidden mt-4">
                 <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -269,9 +245,6 @@
     </div>
 </section>
 
-{{-- ══════════════════════════════════════════════════════
-     CLOSING QUOTE
-══════════════════════════════════════════════════════ --}}
 <section class="cta-section py-24 px-4">
     <div class="absolute inset-0 overflow-hidden pointer-events-none">
         <div class="cta-ring" style="width:500px;height:500px;top:-120px;{{ $isAr ? 'right' : 'left' }}:-120px;"></div>
@@ -284,7 +257,7 @@
         </h2>
         <p class="text-xl font-bold mb-3 reveal reveal-delay-2"
            style="color:rgba(40,157,185,0.9)">
-            {{ $isAr ? 'نحن لا ننتظر الفرص… نحن نصنعها.' : 'We don\'t wait for opportunities — we create them.' }}
+            {{ $isAr ? 'نحن لا ننتظر الفرص… نحن نصنعها.' : 'We don\'t wait for opportunities, we create them.' }}
         </p>
         <p class="text-base leading-relaxed mb-10 reveal reveal-delay-3"
            style="color:rgba(232,244,248,0.75)">

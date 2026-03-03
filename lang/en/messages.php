@@ -26,16 +26,15 @@ return [
     /* ── Footer ── */
     'footer' => [
         'slogan'       => 'Creativity that embodies your vision',
-        'description'  => 'A creative digital solutions team delivering everything your project needs — from visual identity to technical development and advanced marketing.',
+        'description'  => 'A creative digital solutions team delivering everything your project needs, from visual identity to technical development and advanced marketing.',
         'quick_links'  => 'Quick Links',
         'contact'      => 'Contact Us',
         'follow_us'    => 'Follow Us',
         'rights'       => 'All Rights Reserved',
         'made_with'    => 'Made with',
         'by'           => 'by Creative Team',
-        'phone'        => '+962 79 123 4567',
-        'email'        => 'info@creativeteam.jo',
-        'address'      => 'Amman, Jordan',
+        'phone'        => '+963 943 942 035',
+        'email'        => 'info@creativeteamdigital.com',
         'facebook'     => 'Facebook',
         'instagram'    => 'Instagram',
     ],
@@ -44,15 +43,15 @@ return [
     'services' => [
         'hero_tag'      => 'What We Offer',
         'hero_title'    => 'Our Services',
-        'hero_subtitle' => 'At Creative Team, we offer comprehensive digital solutions covering all your project needs — from visual identity to technical development and advanced marketing.',
+        'hero_subtitle' => 'At Creative Team, we offer comprehensive digital solutions covering all your project needs, from visual identity to technical development and advanced marketing.',
         'intro_title'   => 'One Integrated System for Your Project',
-        'intro_text'    => "We don't offer separate services — we build an integrated system that serves your project from the first idea to achieving real results.",
+        'intro_text'    => 'From strategy to execution, one team that covers every angle of your digital presence.',
 
         /* ── Category labels ── */
         'cat_dev'      => 'Development',
-        'cat_social'   => 'Social Media',
+        'cat_social'   => 'Content & Marketing',
         'cat_design'   => 'Design',
-        'cat_video'    => 'Video',
+        'cat_video'    => 'Editing & Montage',
         'cat_photo'    => 'Photography',
 
         /* ── 01 Development ── */
@@ -68,8 +67,8 @@ return [
         ],
 
         /* ── 02 Social Media ── */
-        'social_title'    => 'Social Media Management',
-        'social_subtitle' => 'Thoughtful management built on analysis and strategy — not random posting.',
+        'social_title'    => 'Content Management & Digital Marketing',
+        'social_subtitle' => 'Thoughtful management built on analysis and strategy, not random posting.',
         'social_for'      => 'We serve:',
         'social_clients'  => ['Companies', 'Small & Medium Businesses', 'Brands', 'Stores', 'Content Creators & Influencers'],
         'social_services' => [
@@ -85,7 +84,7 @@ return [
 
         /* ── 03 Design ── */
         'design_title'    => 'Design Services',
-        'design_subtitle' => 'Design for us is not just aesthetics — it\'s a tool for influence and brand building.',
+        'design_subtitle' => 'Design for us is not just aesthetics, it\'s a tool for influence and brand building.',
         'design_services' => [
             ['icon' => 'image',        'title' => 'Social Media Posts',          'desc' => 'Professional designs aligned with your brand identity, crafted to attract attention and boost engagement.'],
             ['icon' => 'copy',         'title' => 'Professional Carousels',      'desc' => 'Multi-slide posts built on smart visual sequences that encourage followers to keep reading.'],
@@ -97,8 +96,8 @@ return [
         ],
 
         /* ── 04 Video ── */
-        'video_title'    => 'Video Production & Editing',
-        'video_subtitle' => 'Video is the most powerful influence tool today — we turn it into an effective sales medium.',
+        'video_title'    => 'Editing & Montage',
+        'video_subtitle' => 'Video is the most powerful influence tool today, we turn it into an effective sales medium.',
         'video_services' => [
             ['icon' => 'film',         'title' => 'Reels Editing',               'desc' => 'Fast-paced short videos optimized for platform algorithms.'],
             ['icon' => 'video',        'title' => 'Promotional Videos',          'desc' => 'Well-conceived ads with a script and execution that serve your sales goal.'],
@@ -120,7 +119,7 @@ return [
 
         /* ── Why Choose Us ── */
         'why_title'    => 'Why Choose Our Services?',
-        'why_subtitle' => 'Because we don\'t offer a separate service — we build an integrated system that serves your project from first idea to real results.',
+        'why_subtitle' => 'Because we don\'t offer a separate service, we build an integrated system that serves your project from first idea to real results.',
         'why_items'    => [
             ['icon' => 'zap',        'title' => 'Speed & Efficiency',     'desc' => 'We deliver on time without compromising quality.'],
             ['icon' => 'shield',     'title' => 'Quality Guaranteed',     'desc' => 'Every deliverable passes thorough quality checks.'],
@@ -130,7 +129,7 @@ return [
 
         /* ── CTA ── */
         'cta_title'    => 'Ready to Start Your Project?',
-        'cta_subtitle' => 'If you\'re looking for a team that combines creativity, analysis, and technical execution — we\'re here to be your success partner.',
+        'cta_subtitle' => 'If you\'re looking for a team that combines creativity, analysis, and technical execution, we\'re here to be your success partner.',
         'cta_button'   => 'Start Now',
     ],
 
@@ -139,13 +138,13 @@ return [
         /* Hero */
         'hero_tag'   => 'About Us',
         'hero_title' => 'Crafting Digital Excellence',
-        'hero_sub'   => 'A full-service digital team united by one goal — to turn ideas into powerful, lasting brands.',
+        'hero_sub'   => 'A full-service digital team united by one goal, to turn ideas into powerful, lasting brands.',
 
         /* Who We Are */
         'who_tag'    => 'Who We Are',
         'who_title'  => 'Creative Team',
         'who_text'   => 'Creative Team is a full-service team of specialists in creative design, content production, digital marketing, and web & app development. We came together with one goal: to transform any idea into a powerful, impactful, and scalable digital presence.',
-        'who_text2'  => "We don't just deliver a standalone service — we build an integrated ecosystem that serves your project from the ground up to real, measurable results.",
+        'who_text2'  => "We don't just deliver a standalone service, we build an integrated ecosystem that serves your project from the ground up to real, measurable results.",
 
         /* Stats */
         'stat_projects'       => '200+',
@@ -164,21 +163,21 @@ return [
             ['icon' => 'dollar-sign',  'text' => 'Budgets spent on ads with no clear strategy'],
             ['icon' => 'image',        'text' => 'Beautiful content with no real impact'],
         ],
-        'why_solution' => 'So we built Creative Team — to deliver integrated solutions under one roof. No more juggling 3 or 4 different agencies. One team, one vision, one clear goal: simplify the path to digital growth for every business owner.',
+        'why_solution' => 'So we built Creative Team, to deliver integrated solutions under one roof. No more juggling 3 or 4 different agencies. One team, one vision, one clear goal: simplify the path to digital growth for every business owner.',
 
         /* Vision */
         'vision_tag'  => 'Our Vision',
-        'vision_text' => 'To be among the leading teams in the Arab and global market in building modern digital brands. We believe the future is fully digital — and those who don\'t build their online presence today will fall behind tomorrow. Our goal is to transform local businesses into brands that compete powerfully — not just through design, but through strategy and results.',
+        'vision_text' => 'To be among the leading teams in the Arab and global market in building modern digital brands. We believe the future is fully digital, and those who don\'t build their online presence today will fall behind tomorrow. Our goal is to transform local businesses into brands that compete powerfully, not just through design, but through strategy and results.',
 
         /* Mission */
         'mission_tag'  => 'Our Mission',
-        'mission_text' => 'We give projects the tools, planning, and execution needed to transform from an idea into an influential brand. We work with an analytical mind and a creative heart — and we measure our success by our clients\' results.',
+        'mission_text' => 'We give projects the tools, planning, and execution needed to transform from an idea into an influential brand. We work with an analytical mind and a creative heart, and we measure our success by our clients\' results.',
 
         /* Differentiators */
         'diff_tag'   => 'Why Us',
         'diff_title' => 'What Sets Us Apart',
         'diffs'      => [
-            'A complete team — not just one person',
+            'A complete team, not just one person',
             'Strategy before execution',
             'Data analysis before every campaign',
             'Customized solutions for each project',
@@ -190,14 +189,14 @@ return [
         'phil_tag'   => 'How We Think',
         'phil_title' => 'Our Work Philosophy',
         'phils'      => [
-            ['icon' => 'trending-up', 'label' => 'Marketing', 'text' => 'Not just advertising — it\'s a system of strategy, data, and storytelling that drives real growth.'],
-            ['icon' => 'feather',     'label' => 'Design',     'text' => 'Not just aesthetics — it\'s the language of your brand, built to attract, convert, and inspire trust.'],
-            ['icon' => 'monitor',     'label' => 'Your Website', 'text' => 'Not just a page — it\'s your most powerful digital asset, working for you 24/7.'],
+            ['icon' => 'trending-up', 'label' => 'Marketing', 'text' => 'Not just advertising, it\'s a system of strategy, data, and storytelling that drives real growth.'],
+            ['icon' => 'feather',     'label' => 'Design',     'text' => 'Not just aesthetics, it\'s the language of your brand, built to attract, convert, and inspire trust.'],
+            ['icon' => 'monitor',     'label' => 'Your Website', 'text' => 'Not just a page, it\'s your most powerful digital asset, working for you 24/7.'],
         ],
 
         /* CTA */
         'cta_title'  => 'Ready to Build Something Great?',
-        'cta_sub'    => "At Creative Team, we don't just promise quick results — we promise to build a long-term digital foundation. If you're looking for a true partner for your project's growth, you're in the right place.",
+        'cta_sub'    => "At Creative Team, we don't just promise quick results, we promise to build a long-term digital foundation. If you're looking for a true partner for your project's growth, you're in the right place.",
         'cta_button' => 'Start Your Journey',
     ],
 
@@ -206,13 +205,13 @@ return [
         /* Hero */
         'hero_tag'   => 'Contact Us',
         'hero_title' => 'Let\'s Build Something Great',
-        'hero_sub'   => 'Ready to take your project to the next level? Creative Team is here — let\'s take a new step toward digital success together.',
+        'hero_sub'   => 'Ready to take your project to the next level? Creative Team is here, let\'s take a new step toward digital success together.',
 
         /* CTA Banner */
         'cta_tag'    => 'Free Consultation',
         'cta_title'  => 'Book a Free Consultation',
         'cta_text'   => 'We offer a free initial consultation to analyze your project and suggest the best solutions for you.',
-        'cta_button' => 'Book Now — It\'s Free',
+        'cta_button' => 'Book Now, It\'s Free',
 
         /* Direct Contact */
         'direct_tag'   => 'Direct Contact',
@@ -238,16 +237,16 @@ return [
         'services_list'=> [
             'Web Development',
             'Mobile App',
-            'Social Media Management',
+            'Content Management & Digital Marketing',
             'Visual Identity & Logo',
-            'Video Production',
+            'Editing & Montage',
             'Photography',
             'Other',
         ],
 
         /* Closing */
         'closing_title' => 'At Creative Team,',
-        'closing_text'  => 'We don\'t wait for opportunities — we create them. Contact us today and let\'s start building your digital presence the way your project deserves.',
+        'closing_text'  => 'We don\'t wait for opportunities, we create them. Contact us today and let\'s start building your digital presence the way your project deserves.',
     ],
 
     /* ── Home Page ── */
@@ -256,8 +255,8 @@ return [
         /* Hero */
         'hero_tag'      => 'Creative Team',
         'hero_title'    => 'We Turn Your Idea Into a Powerful Digital Presence',
-        'hero_services' => 'Design & Creativity · Video & Photo Production · Social Media Management · Web & App Development',
-        'hero_tagline'  => 'From strategy to execution — one team, one vision.',
+        'hero_services' => 'Design & Creativity · Editing & Montage · Content & Digital Marketing · Web & App Development',
+        'hero_tagline'  => 'From strategy to execution, one team, one vision.',
         'hero_cta1'     => 'Book a Free Consultation',
         'hero_cta2'     => 'Explore Our Services',
 
@@ -271,14 +270,14 @@ return [
 
         /* Who We Are */
         'who_tag'    => 'Who We Are',
-        'who_title'  => 'Creative Team — Your Digital Growth Partner',
-        'who_text'   => 'We\'re a full-service creative team combining design, content production, marketing, and development under one roof. We don\'t just execute — we strategize, build, and grow with you.',
+        'who_title'  => 'Creative Team, Your Digital Growth Partner',
+        'who_text'   => 'We\'re a full-service creative team combining design, content production, marketing, and development under one roof. We don\'t just execute, we strategize, build, and grow with you.',
         'who_button' => 'Learn More About Us',
 
         /* Services Preview */
         'services_tag'   => 'What We Do',
         'services_title' => 'Everything Your Project Needs',
-        'services_sub'   => 'From brand identity to technical development — we cover every angle of your digital growth.',
+        'services_sub'   => 'From brand identity to technical development, we cover every angle of your digital growth.',
         'services_cards' => [
             ['emoji' => '🎨', 'title' => 'Design & Creativity',  'desc' => 'Visual identity, logos, social media posts, carousels, and professional mockups.'],
             ['emoji' => '🎥', 'title' => 'Production & Editing', 'desc' => 'Videos, reels, motion graphics, and professional product photography.'],
@@ -300,7 +299,7 @@ return [
         'why_tag'   => 'Why Choose Us',
         'why_title' => 'What Makes Us Different',
         'why_items' => [
-            ['icon' => 'users',       'text' => 'One integrated team — no scattered freelancers'],
+            ['icon' => 'users',       'text' => 'One integrated team, no scattered freelancers'],
             ['icon' => 'map',         'text' => 'Strategy always comes before execution'],
             ['icon' => 'bar-chart-2', 'text' => 'Data analysis before every campaign'],
             ['icon' => 'settings',    'text' => 'Customized solutions for each project'],
