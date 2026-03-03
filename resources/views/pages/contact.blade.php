@@ -23,16 +23,16 @@
     <div class="glow-orb w-64 h-64 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:8%; right:4%;"></div>
 
-    <span class="float-obj float-a" style="top:12%; left:6%;">📞</span>
-    <span class="float-obj float-b" style="top:16%; right:8%;">💬</span>
-    <span class="float-obj float-c" style="bottom:20%; left:5%;">✉️</span>
-    <span class="float-obj float-a" style="bottom:16%; right:6%; animation-delay:-3s;">🤝</span>
+    <span class="float-obj float-a text-3xl md:text-5xl" style="top:12%; left:6%;">📞</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:16%; right:8%;">💬</span>
+    <span class="float-obj float-c text-3xl md:text-5xl" style="bottom:20%; left:5%;">✉️</span>
+    <span class="float-obj float-a text-2xl md:text-4xl" style="bottom:16%; right:6%; animation-delay:-3s;">🤝</span>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div class="section-tag mb-6 justify-center reveal">
             {{ __('messages.contact.hero_tag') }}
         </div>
-        <h1 class="text-5xl md:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight">
             <span class="gradient-text">{{ __('messages.contact.hero_title') }}</span>
         </h1>
         <p class="text-lg md:text-xl text-dim max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">
@@ -67,8 +67,8 @@
                 <p class="text-dim text-sm">{{ __('messages.contact.cta_text') }}</p>
             </div>
             <a href="{{ $waLink }}" target="_blank" rel="noopener"
-               class="btn-primary flex-shrink-0">
-                🚀 {{ $isAr ? 'احجز الآن — مجاناً' : 'Book Now — It\'s Free' }}
+               class="btn-primary flex-shrink-0 w-full sm:w-auto justify-center">
+                🚀 {{ $isAr ? 'احجز الآن, مجاناً' : 'Book Now, It\'s Free' }}
             </a>
         </div>
     </div>
@@ -210,7 +210,7 @@
             <div class="form-group">
                 <label class="form-label">{{ __('messages.contact.field_service') }}</label>
                 <select name="service" class="form-input form-select">
-                    <option value="">{{ $isAr ? '— اختر الخدمة —' : '— Select a service —' }}</option>
+                    <option value="">{{ $isAr ? ',  اختر الخدمة , ' : ',  Select a service , ' }}</option>
                     @foreach(__('messages.contact.services_list') as $svc)
                     <option value="{{ $svc }}">{{ $svc }}</option>
                     @endforeach
@@ -257,7 +257,7 @@
         </h2>
         <p class="text-xl font-bold mb-3 reveal reveal-delay-2"
            style="color:rgba(40,157,185,0.9)">
-            {{ $isAr ? 'نحن لا ننتظر الفرص… نحن نصنعها.' : 'We don\'t wait for opportunities — we create them.' }}
+            {{ $isAr ? 'نحن لا ننتظر الفرص… نحن نصنعها.' : 'We don\'t wait for opportunities, we create them.' }}
         </p>
         <p class="text-base leading-relaxed mb-10 reveal reveal-delay-3"
            style="color:rgba(232,244,248,0.75)">

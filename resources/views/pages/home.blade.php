@@ -73,7 +73,7 @@
 
 <section class="py-24 px-4" style="background:var(--bg)">
     <div class="max-w-5xl mx-auto">
-        <div class="glass-card p-8 md:p-12 flex flex-col md:flex-row items-center gap-10">
+        <div class="glass-card p-6 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-10">
 
             <div class="flex-shrink-0 who-icon-wrap reveal">
                 <span class="text-6xl">🏢</span>

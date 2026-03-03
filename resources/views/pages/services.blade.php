@@ -17,11 +17,11 @@
     <div class="glow-orb w-72 h-72 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:10%; right:5%;"></div>
 
-    <span class="float-obj float-a" style="top:12%; left:7%;">💻</span>
-    <span class="float-obj float-b" style="top:18%; right:9%;">📱</span>
-    <span class="float-obj float-c" style="bottom:22%; left:6%;">🎨</span>
-    <span class="float-obj float-a" style="bottom:18%; right:7%; animation-delay:-3s;">🎬</span>
-    <span class="float-obj float-b" style="top:55%; left:3%; animation-delay:-1.5s;">📸</span>
+    <span class="float-obj float-a text-3xl md:text-5xl" style="top:12%; left:7%;">💻</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:18%; right:9%;">📱</span>
+    <span class="float-obj float-c text-3xl md:text-5xl" style="bottom:22%; left:6%;">🎨</span>
+    <span class="float-obj float-a text-2xl md:text-4xl" style="bottom:18%; right:7%; animation-delay:-3s;">🎬</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:55%; left:3%; animation-delay:-1.5s;">📸</span>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
 
@@ -29,7 +29,7 @@
             {{ __('messages.services.hero_tag') }}
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-black mb-6 reveal reveal-delay-1 text-body leading-tight">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 text-body leading-tight">
             <span class="gradient-text">{{ __('messages.services.hero_title') }}</span>
         </h1>
 
@@ -315,7 +315,7 @@ $cats = [
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                 </svg>
             </a>
-            <a href="https://wa.me/96279123456"
+            <a href="https://wa.me/963940832959"
                class="inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold border-2 text-white
                       border-white/30 hover:border-white hover:bg-white/10 transition-all">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

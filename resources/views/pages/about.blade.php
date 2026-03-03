@@ -17,17 +17,17 @@
     <div class="glow-orb w-72 h-72 opacity-10 dark:opacity-20"
          style="background:#3f5965; bottom:10%; right:5%;"></div>
 
-    <span class="float-obj float-a" style="top:10%; left:6%;">🏆</span>
-    <span class="float-obj float-b" style="top:15%; right:8%;">🚀</span>
-    <span class="float-obj float-c" style="bottom:20%; left:5%;">💡</span>
-    <span class="float-obj float-a" style="bottom:16%; right:6%; animation-delay:-3s;">🎯</span>
-    <span class="float-obj float-b" style="top:50%; left:2%; animation-delay:-1.5s;">⚡</span>
+    <span class="float-obj float-a text-3xl md:text-5xl" style="top:10%; left:6%;">🏆</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:15%; right:8%;">🚀</span>
+    <span class="float-obj float-c text-3xl md:text-5xl" style="bottom:20%; left:5%;">💡</span>
+    <span class="float-obj float-a text-2xl md:text-4xl" style="bottom:16%; right:6%; animation-delay:-3s;">🎯</span>
+    <span class="float-obj float-b text-2xl md:text-4xl" style="top:50%; left:2%; animation-delay:-1.5s;">⚡</span>
 
     <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
         <div class="section-tag mb-6 justify-center reveal">
             {{ __('messages.about.hero_tag') }}
         </div>
-        <h1 class="text-5xl md:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight">
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 reveal reveal-delay-1 leading-tight">
             <span class="gradient-text">{{ __('messages.about.hero_title') }}</span>
         </h1>
         <p class="text-lg md:text-xl text-dim max-w-2xl mx-auto leading-relaxed reveal reveal-delay-2">
@@ -49,7 +49,7 @@
 
 <section class="py-14 bg-surface border-y border-theme overflow-hidden">
     <div class="max-w-5xl mx-auto px-4">
-        <div class="grid grid-cols-3 gap-6 text-center">
+        <div class="grid grid-cols-3 gap-3 sm:gap-6 text-center">
 
             @php
             $stats = [
@@ -72,7 +72,7 @@
 
 <section class="py-24 px-4" style="background: var(--bg);">
     <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
             <div>
                 <div class="section-tag mb-4 reveal">{{ __('messages.about.who_tag') }}</div>

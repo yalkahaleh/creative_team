@@ -999,4 +999,22 @@ html[dir="rtl"] .mobile-menu-panel { right: 0; border-left: 1px solid var(--bord
   .text-body  { color: var(--text); }
   .text-dim   { color: var(--text-muted); }
   .border-theme { border-color: var(--border); }
+
+  /* Hide scrollbar (cross-browser) */
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+/* ═══════════════════════════════════════════
+   Mobile Responsive Overrides
+═══════════════════════════════════════════ */
+@media (max-width: 639px) {
+  /* Scale down hero floating emoji objects */
+  .float-obj { font-size: 2rem; }
+
+  /* Tighten story solution card padding */
+  .story-solution-card { padding: 1.25rem 1.25rem; gap: 1rem; }
+
+  /* Make consult banner stack neatly */
+  .consult-banner { padding: 1.25rem 1.25rem; gap: 1rem; }
 }
