@@ -241,6 +241,16 @@
                 {{ $isAr ? 'تم استلام رسالتك! سنتواصل معك قريباً.' : 'Message received! We\'ll get back to you soon.' }}
             </div>
 
+            <div id="formError" class="hidden mt-4 flex items-center gap-3 px-4 py-3 rounded-xl
+                                        border border-red-300 bg-red-50 text-red-600 text-sm font-semibold
+                                        dark:bg-red-900/20 dark:border-red-700 dark:text-red-400">
+                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                {{ $isAr ? 'حدث خطأ ما، يرجى المحاولة مرة أخرى.' : 'Something went wrong. Please try again.' }}
+            </div>
+
         </form>
     </div>
 </section>
@@ -276,21 +286,42 @@
 
 @push('scripts')
 <script>
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
     e.preventDefault();
+
     const btn     = document.getElementById('formSubmit');
     const success = document.getElementById('formSuccess');
+    const error   = document.getElementById('formError');
 
     btn.disabled = true;
     btn.style.opacity = '0.7';
+    success.classList.add('hidden');
+    error.classList.add('hidden');
 
-    // Will be wired to email submission later
-    setTimeout(() => {
-        success.classList.remove('hidden');
+    const data = new FormData(this);
+
+    try {
+        const res = await fetch('{{ $isAr ? route("ar.contact.send") : route("contact.send") }}', {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                'Accept': 'application/json',
+            },
+            body: data,
+        });
+
+        if (res.ok) {
+            success.classList.remove('hidden');
+            this.reset();
+        } else {
+            error.classList.remove('hidden');
+        }
+    } catch {
+        error.classList.remove('hidden');
+    } finally {
         btn.disabled = false;
         btn.style.opacity = '1';
-        this.reset();
-    }, 600);
+    }
 });
 </script>
 @endpush

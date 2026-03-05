@@ -16,6 +16,7 @@ Route::get('/',          [PageController::class, 'home'])->name('home');
 Route::get('/services',  [PageController::class, 'services'])->name('services');
 Route::get('/about',     [PageController::class, 'about'])->name('about');
 Route::get('/contact',   [PageController::class, 'contact'])->name('contact');
+Route::post('/contact/send', [PageController::class, 'sendContact'])->name('contact.send');
 
 // ── Arabic (/ar/ prefix) ─────────────────────────────────────────────────
 Route::prefix('ar')->group(function () {
@@ -23,4 +24,5 @@ Route::prefix('ar')->group(function () {
     Route::get('/services', [PageController::class, 'services'])->name('ar.services');
     Route::get('/about',    [PageController::class, 'about'])->name('ar.about');
     Route::get('/contact',  [PageController::class, 'contact'])->name('ar.contact');
+    Route::post('/contact/send', [PageController::class, 'sendContact'])->name('ar.contact.send');
 });
